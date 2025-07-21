@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Paillotte – Bar-Restaurant Latino · Le Havre</title>
+  <img src="logo_paillotte.jpeg" alt="Logo La Paillotte" class="h-10 mr-2">
   <script src="https://cdn.tailwindcss.com"></script> <!-- ✅ Tailwind CDN -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,13 +22,18 @@
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <header class="sticky top-0 bg-brown/80 backdrop-blur shadow z-40">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-      <div class="flex items-center space-x-2">
-        <span class="text-xl font-bold text-black-900">La Paillotte</span>
-      </div>
-    </div>
-  </header>
+ <header class="sticky top-0 bg-brown/80 backdrop-blur shadow z-40">
+  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <span class="text-xl font-bold text-black-900">La Paillotte</span>
+    <nav class="space-x-4 text-sm">
+      <a href="index.html" class="text-black hover:underline">Accueil</a>
+      <a href="menu.html" class="text-black hover:underline">Menu</a>
+      <a href="#location" class="text-black hover:underline">Emplacement</a>
+      <a href="#gallery" class="text-black hover:underline">Galerie</a>
+    </nav>
+  </div>
+</header>
+
 
   <main>
     <!-- Hero Section -->
@@ -47,16 +53,20 @@
     </section>
 
     <!-- Menu -->
-    <section id="menu">
-      <h2>À la carte</h2>
-      <ul>
-        <li>Mojito, Ti Punch, Caïpirinha – 8,50 €</li>
-        <li>Paillote Blonde – 3,00 € / 5,50 €</li>
-        <li>Planches Mix – 15,00 €</li>
-        <li>Plat du jour – 10,00 €</li>
-      </ul>
-      <a href="White Minimalistic Bar Drinks Price Menu.pdf" download>Télécharger la carte complète</a>
-    </section>
+  <section id="menu" class="my-12">
+  <h2 class="text-2xl font-bold mb-4">À la carte</h2>
+  <ul class="list-disc list-inside mb-4">
+    <li>Mojito, Ti Punch, Caïpirinha – 8,50 €</li>
+    <li>Paillote Blonde – 3,00 € / 5,50 €</li>
+    <li>Planches Mix – 15,00 €</li>
+    <li>Plat du jour – 10,00 €</li>
+  </ul>
+  <p class="text-sm">
+    📄 Voir le menu complet en ligne :
+    <a href="menu.html" class="text-blue-600 underline">Cliquez ici</a>
+  </p>
+</section>
+
 
     <!-- Location -->
     <section id="location">
