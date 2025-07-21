@@ -70,6 +70,16 @@
     }
   </style>
 </head>
+<!-- GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
 <body>
 
   <!-- Navbar -->
@@ -112,15 +122,20 @@
     <h2 class="text-center fw-bold mb-5">Ambiance & Décoration</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <img src="images/Bar2_interieur.jpg" alt="Salle intérieure chaleureuse" class="gallery-img">
+        <a href="images/Bar2_interieur.jpg" class="glightbox" data-gallery="lp-gallery">
+  <img src="images/Bar2_interieur.jpg" alt="Salle intérieure chaleureuse" class="gallery-img">
+</a>
+
         <h5 class="text-center mt-2">Intérieur chaleureux</h5>
       </div>
       <div class="col-md-4">
-        <img src="images/inside_bar_alcohol.jpg" alt="Bouteilles et bar de nuit" class="gallery-img">
+        <a href="images/Bar2_interieur.jpg" class="glightbox" data-gallery="lp-gallery">
+        <img src="images/inside_bar_alcohol.jpg" alt="Bouteilles et bar de nuit" class="gallery-img"> </a>
         <h5 class="text-center mt-2">Notre sélection de boissons</h5>
       </div>
       <div class="col-md-4">
-        <img src="images/planches.jpg" alt="Planches apéritives garnies" class="gallery-img">
+        <a href="images/Bar2_interieur.jpg" class="glightbox" data-gallery="lp-gallery">
+        <img src="images/planches.jpg" alt="Planches apéritives garnies" class="gallery-img"> </a>
         <h5 class="text-center mt-2">Nos Planches Mixtes</h5>
       </div>
     </div>
