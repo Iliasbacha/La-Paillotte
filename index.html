@@ -1,124 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta name="google" content="notranslate">
-<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Paillotte – Bar-Restaurant · Le Havre</title>
-  <img src="images/logo_paillotte_N.jpeg" alt="Logo La Paillotte" class="h-10 mr-2">
-  <script src="https://cdn.tailwindcss.com"></script> <!-- ✅ Tailwind CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Your custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: 'Montserrat', Arial, sans-serif; }
+    .hero-section {
+      position: relative;
+      min-height: 75vh;
+      background: url('images/terrasse_day.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 32, 35, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 16px #000;
+      font-weight: 700;
+    }
+    .hero-content p {
+      font-size: 1.4rem;
+      text-shadow: 1px 1px 8px #333;
+    }
+    .gallery-img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      transition: transform 0.2s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.04);
+    }
+    footer {
+      background: #232323;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      letter-spacing: 1px;
+    }
+    .navbar {
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .nav-link.active, .nav-link:focus, .nav-link:hover {
+      color: #eab308 !important;
+      font-weight: 600;
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Sticky Header -->
-  <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 1000;"></div>
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
- <header class="sticky top-0 bg-brown/80 backdrop-blur shadow z-40">
-  <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-    <span class="text-xl font-bold text-black-900">La Paillotte</span>
-    <nav class="space-x-4 text-sm">
-      <a href="templates/index.html" class="text-black hover:underline">Accueil</a>
-      <a href="templates/Menu.html" class="text-black hover:underline">Menu</a>
-      <a href="#location" class="text-black hover:underline">Emplacement</a>
-      <a href="#gallery" class="text-black hover:underline">Galerie</a>
-    </nav>
-  </div>
-</header>
-
-
-  <main>
-    <!-- Hero Section -->
-<section id="hero" class="relative h-[85vh] bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('images/terrasse_day.jpg');">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-    
-    <!-- Texte à gauche -->
-    <div class="text-center md:text-left">
-      <h1 class="text-4xl md:text-5xl font-bold text-yellow-600 mb-6 drop-shadow">Bienvenue à La Paillotte</h1>
-      <p class="text-lg md:text-xl text-gray-800">
-        Terrasse vue sur le terminal de croisière du Havre,<br>
-        cuisine maison & ambiance conviviale.
-      </p>
-    </div>
-
-    <!-- Images à droite -->
-    <div class="space-y-5">
-      <img src="images/terrasse_day.jpg" alt="Terrasse du jour" class="rounded-lg shadow-md w-full md:w-2/3">
-
-    </div>
-    
-</section>
-<!-- Séparateur visuel -->
-<div class="h-16 bg-gradient-to-b from-black/50 to-white"></div>
-
-<!-- Gallery Section -->
-<section id="gallery" class="max-w-6xl mx-auto px-4 py-12">
-  <h2 class="text-3xl font-bold text-center mb-8">Ambiance & Décoration</h2>
-
-  <div class="grid md:grid-cols-2 gap-8">
-    <div>
-      <img src="images/Bar2_interieur.jpg" alt="Salle intérieure chaleureuse" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-semibold mt-4 text-center">Intérieur chaleureux</h3>
-    </div>
-
-    <div>
-      <img src="images/inside_bar_alcohol.jpg" alt="Bouteilles et bar de nuit" class="rounded-xl shadow-lg">
-      <h3 class="text-xl font-semibold mt-4 text-center">Notre sélection de boissons</h3>
-    </div>
-
-    <div class="md:col-span-2">
-      <img src="images/planches.jpg" alt="Planches apéritives garnies" class="rounded-xl shadow-lg w-full">
-      <h3 class="text-xl font-semibold mt-4 text-center">Nos Planches Mixtes</h3>
-    </div>
-  </div>
-</section>
-
-
-    
-
-    <!-- Menu -->
-  <section id="Menu" class="my-12">
-  <h2 class="text-2xl font-bold mb-4">À la carte</h2>
-  <ul class="list-disc list-inside mb-4">
-    <li>Mojito, Ti Punch, Caïpirinha – 8,50 €</li>
-    <li>Paillote Blonde – 3,00 € / 5,50 €</li>
-    <li>Planches Mix – 15,00 €</li>
-    <li>Plat du jour – 10,00 €</li>
-  </ul>
-  <p class="text-sm">
-    📄 Voir le menu complet en ligne :
-    <a href="templates/Menu.html" class="text-blue-600 underline">Cliquez ici</a>
-  </p>
-</section>
-
-
-    <!-- Location -->
-    <section id="location">
-      <h2>Notre Terrasse & Emplacement</h2>
-      <img src="terrace_day.jpg" alt="Terrasse ensoleillée au centre-ville du Havre">
-      <p>📍 2 Rue de Paris, Le Havre</p>
-
-      <!-- Google Maps Embed -->
-      <div style="margin-top: 1rem;">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.940839936692!2d0.10526561567474726!3d49.48580322030457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02edfbf764091%3A0xe85e2fa7a196f903!2sLe%20Monte-Cristo!5e0!3m2!1sfr!2sfr!4v1721336455397!5m2!1sfr!2sfr"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images/logo_paillotte_N.jpeg" alt="Logo La Paillotte" style="height: 44px; border-radius: 0.5rem; margin-right:8px;">
+        La Paillotte
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="Menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#location">Emplacement</a></li>
+        </ul>
       </div>
-    </section>
-  </main>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Bienvenue à La Paillotte</h1>
+      <p>Terrasse vue sur le terminal de croisière du Havre,<br>
+      cuisine maison & ambiance conviviale.</p>
+      <a href="Menu.html" class="btn btn-warning btn-lg shadow mt-4">
+        Voir le menu <i class="fa-solid fa-utensils ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="container py-5">
+    <h2 class="text-center fw-bold mb-5">Ambiance & Décoration</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <img src="images/Bar2_interieur.jpg" alt="Salle intérieure chaleureuse" class="gallery-img">
+        <h5 class="text-center mt-2">Intérieur chaleureux</h5>
+      </div>
+      <div class="col-md-4">
+        <img src="images/inside_bar_alcohol.jpg" alt="Bouteilles et bar de nuit" class="gallery-img">
+        <h5 class="text-center mt-2">Notre sélection de boissons</h5>
+      </div>
+      <div class="col-md-4">
+        <img src="images/planches.jpg" alt="Planches apéritives garnies" class="gallery-img">
+        <h5 class="text-center mt-2">Nos Planches Mixtes</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Preview Section -->
+  <section class="container py-5">
+    <h2 class="fw-bold mb-4">À la carte</h2>
+    <ul class="mb-3">
+      <li>Mojito, Ti Punch, Caïpirinha – 8,50 €</li>
+      <li>Paillote Blonde – 3,00 € / 5,50 €</li>
+      <li>Planches Mix – 15,00 €</li>
+      <li>Plat du jour – 10,00 €</li>
+    </ul>
+    <p>
+      📄 Voir le menu complet en ligne :
+      <a href="Menu.html" class="text-warning text-decoration-underline">Cliquez ici</a>
+    </p>
+  </section>
+
+  <!-- Location Section -->
+  <section id="location" class="container py-5">
+    <h2 class="fw-bold mb-3">Notre Terrasse & Emplacement</h2>
+    <img src="images/terrasse_day.jpg" alt="Terrasse ensoleillée au centre-ville du Havre" class="gallery-img mb-3">
+    <p>📍 2 Rue de Paris, Le Havre</p>
+    <div class="ratio ratio-16x9 mb-3">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.940839936692!2d0.10526561567474726!3d49.48580322030457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e02edfbf764091%3A0xe85e2fa7a196f903!2sLe%20Monte-Cristo!5e0!3m2!1sfr!2sfr!4v1721336455397!5m2!1sfr!2sfr"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 La Paillotte • By IE FTS</p>
+    <div>
+      <span>&copy; 2025 La Paillotte • By IE FTS</span>
+      <span class="ms-3">
+        <!--<a href="https://www.facebook.com/" target="_blank" class="text-white me-2"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>-->
+      </span>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
