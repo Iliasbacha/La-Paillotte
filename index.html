@@ -7,15 +7,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>La Paillotte</h1>
-    <p>Ambiance Latino – Bar-Restaurant à Le Havre</p>
+  <!-- Sticky Header -->
+  <header class="sticky top-0 bg-brown/80 backdrop-blur shadow z-40">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-2">
+        <span class="text-xl font-bold text-black-900">La Paillotte</span>
   </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-[70vh] bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('terrace_port.jpg');">
+    <div class="bg-black/50 p-8 rounded-xl">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue à La Paillotte</h1>
+      <p class="text-lg md:text-xl">Terrasse face au port du Havre, cuisine fraîche & ambiance conviviale.</p>
+    </div>
+  </section>
 
   <section id="gallery">
     <h2>Ambiance & Décoration</h2>
     <img src="bar.jpg" alt="Bar en journée">
-    <img src="night_bare.jpg" alt="Bar de nuit">
+    <h3>Nos Planches Mixtes</h3>
     <img src="planches.jpg" alt="Planches apéritives">
   </section>
 
@@ -33,7 +43,7 @@
   <section id="location">
     <h2>Notre Terrasse & Emplacement</h2>
     <img src="terrace_day.jpg" alt="Terrasse centre-ville">
-    <img src="terrace_port.jpg" alt="Terrasse vue port">
+    
     <p>📍 10 Rue de Paris, Le Havre</p>
   </section>
 
